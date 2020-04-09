@@ -8,24 +8,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- for autowiring -->
-    <context:annotation-config/>
+    <!-- component scanning -->
+    <context:component-scan base-package="academy.learnprogramming"/>
 
-    <!--<bean id="" class="">-->
-        <!--collaborators and configuration for this bean go here-->
-    <!--</bean>-->
-    <bean id="numberGenerator" class="academy.learnprogramming.NumberGeneratorImpl"/>
-    <!--<bean id="game" class="academy.learnprogramming.GameImpl" init-method="reset">-->
-    <bean id="game" class="academy.learnprogramming.GameImpl">
-        <!-- constructor based dependency injection -->
-        <!--<constructor-arg ref="numberGenerator"/>-->
-        <!-- setter based dependency injection -->
-        <!--<property name="numberGeneratorField" ref="numberGenerator"/>-->
-        <!-- explicit DI not needed with autowiring -->
-    </bean>
-
-    <!-- to recognize the post-construct annotation -->
-    <!--<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
-    <!-- not needed with autowiring -->
 
 </beans>
