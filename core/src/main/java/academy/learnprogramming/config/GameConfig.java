@@ -5,14 +5,16 @@ import academy.learnprogramming.MaxNumber;
 import academy.learnprogramming.MinNumber;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
+
 @Configuration
+@ComponentScan(basePackages = "academy.learnprogramming")
 @PropertySource("classpath:config/game.properties")
 public class GameConfig {
-//        private int maxNumber = 100;
-//        private int guessCount = 10;
+
     @Value("${game.maxNumber:50}")
     private int maxNumber;
     @Value("${game.guessCount:8}")
