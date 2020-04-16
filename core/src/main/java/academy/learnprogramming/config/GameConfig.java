@@ -1,5 +1,7 @@
 package academy.learnprogramming.config;
 
+import academy.learnprogramming.GuessCount;
+import academy.learnprogramming.MaxNumber;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,12 +12,14 @@ public class GameConfig {
         private int guessCount = 10;
 
         @Bean
-        public int maxNumber() {
+        @MaxNumber
+        public int getMaxNumber() {
             return maxNumber;
         }
 
         @Bean
-        public int guessCount() {
+        @GuessCount
+        public int getGuessCount() {
             return guessCount;
         }
 }

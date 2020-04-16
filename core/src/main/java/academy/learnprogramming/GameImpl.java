@@ -17,6 +17,7 @@ public class GameImpl implements Game {
     private NumberGenerator numberGeneratorField;   // A dependency for GameIpl bean
 //    private int guessCount = 10;
     @Autowired
+    @GuessCount
     private int guessCount;
     private int number;
     private int guess;
