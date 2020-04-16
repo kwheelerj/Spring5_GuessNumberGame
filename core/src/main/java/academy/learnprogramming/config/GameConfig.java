@@ -12,9 +12,9 @@ import org.springframework.context.annotation.PropertySource;
 public class GameConfig {
 //        private int maxNumber = 100;
 //        private int guessCount = 10;
-    @Value("${game.maxNumber}")
+    @Value("${game.maxNumber}:50")
     private int maxNumber;
-    @Value("${game.guessCount}")
+    @Value("${game.guessCount}:8")
     private int guessCount;
 
         @Bean
