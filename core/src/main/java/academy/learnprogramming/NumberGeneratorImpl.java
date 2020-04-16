@@ -1,5 +1,6 @@
 package academy.learnprogramming;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
@@ -8,7 +9,10 @@ import java.util.Random;
 public class NumberGeneratorImpl implements NumberGenerator {
 
     private final Random random = new Random();
-    private int maxNumber = 100;
+//    private int maxNumber = 100;
+    @Autowired
+    private int maxNumber;
+
 
     @Override
     public int next() {

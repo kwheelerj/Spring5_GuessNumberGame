@@ -1,7 +1,7 @@
 package academy.learnprogramming.console;
 
 import academy.learnprogramming.MessageGenerator;
-import academy.learnprogramming.NumberGenerator;
+import academy.learnprogramming.config.AppConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -18,17 +18,17 @@ public class Main {
 
         // create context (container) first
         ConfigurableApplicationContext context =
-                new AnnotationConfigApplicationContext(academy.learnprogramming.AppConfig.class);
+                new AnnotationConfigApplicationContext(AppConfig.class);
 //                new ClassPathXmlApplicationContext(CONFIG_LOCATION);
 
-        // get the number generator bean from the context (container)
-        log.debug("before creating numberGenerator");
-        NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
-
-        // call method to get a random number
-        int number = numberGenerator.next();
-
-        log.info("number = {}", number);
+//        // get the number generator bean from the context (container)
+//        log.debug("before creating numberGenerator");
+//        NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
+//
+//        // call method to get a random number
+//        int number = numberGenerator.next();
+//
+//        log.info("number = {}", number);
 
         // get MessageGenerator bean from context
         MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
