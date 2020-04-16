@@ -28,11 +28,27 @@ public class MessageGeneratorImpl implements MessageGenerator {
 
     @Override
     public String getMainMessage() {
-        return "getMainMessage() called";
+        return "Number is between " + gameField.getSmallest() +
+                " and " + gameField.getLargest() +
+                ".  Can you guess it?";
     }
 
     @Override
     public String getResultMessage() {
-        return "getResultMessage() called";
+        if (gameField.isGameWon())
+            return "You guessed it!  The number was " + gameField.getNumber();
+        else if (gameField.isGameLost())
+            return "You lost.  The number was " + gameField.getNumber();
+        else if (!gameField.isValidNumberRange())
+            return "Invalid number range!";
+        else if (gameField.getRemainingGuesses() == guessCount)
+            return "What is your first guess?";
+        else {
+            String direction = "Lower";
+            if (gameField.getGuess() < gameField.getNumber())
+                direction = "Higher";
+            return direction + "!  You have " +
+                        gameField.getRemainingGuesses() + " guesses left.";
+        }
     }
 }
