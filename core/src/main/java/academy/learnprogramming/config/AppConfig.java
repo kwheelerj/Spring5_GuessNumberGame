@@ -13,10 +13,11 @@ public class AppConfig {
     // bean methods, to find components
     // These bean methods produce beans
     //  to be managed by this Spring container.
-    @Bean
-    public NumberGenerator numberGenerator() {
-        return new NumberGeneratorImpl();
-    }
+//    @Bean
+//    public NumberGenerator numberGenerator() {
+//        return new NumberGeneratorImpl();
+//    }
+    // REMOVED above; @Component on NumberGeneratorImpl instead.
 
     @Bean
     public Game game() {

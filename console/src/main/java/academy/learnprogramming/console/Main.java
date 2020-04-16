@@ -31,9 +31,9 @@ public class Main {
 //        log.info("number = {}", number);
 
         // get MessageGenerator bean from context
-        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
-        log.info("getMainMessage = {}", messageGenerator.getMainMessage());
-        log.info("getResultMessage = {}", messageGenerator.getResultMessage());
+//        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
+//        log.info("getMainMessage = {}", messageGenerator.getMainMessage());
+//        log.info("getResultMessage = {}", messageGenerator.getResultMessage());
 
         // close context (container); prevent memory resource leaks
         context.close();
