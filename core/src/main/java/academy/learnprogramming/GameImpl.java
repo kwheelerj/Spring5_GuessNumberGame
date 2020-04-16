@@ -13,7 +13,7 @@ public class GameImpl implements Game {
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
     private final NumberGenerator numberGeneratorField;   // A dependency for GameIpl bean
-    private int guessCount;
+    private final int guessCount;
 
     private int number;
     private int guess;
