@@ -40,7 +40,7 @@ public class GameImpl implements Game {
     @Override
     public void reset() {
         log.info("in GameImpl reset()");
-        smallest = 0;
+        smallest = numberGeneratorField.getMinNumber();
         guess = 0;
         remainingGuesses = guessCount;
         largest = numberGeneratorField.getMaxNumber();
